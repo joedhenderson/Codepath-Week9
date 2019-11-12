@@ -24,7 +24,8 @@ CHALLENGE GOALS
 
 
 
-5. Cross-Site Request Forgery: One of the three sites does not have CSRF protections on the admin area. A clever attacker could design a form which would automatically submit form data to the staff area and take advantage of a logged in user's access permissions. Be the attacker and design a form which will make a change to the spelling of some database content. (For example, change the first user from "James" to "Jim", or change "Alabama" to "Alabamaaaa".) Then point the form action at each of the three sites to find out which color has the vulnerability. Do not neglect to be stealthy with your form—your unsuspecting, logged-in admin should neither see the form nor the results of the form submission.
+5. Cross-Site Request Forgery: Because the red site does not have the certain CSRF protections it would allow any user to simply create the form to be pointed to that page could run and change the data in the pages.
+![Alt Text](https://media.giphy.com/media/j29zQbS8wfRVUud0fk/giphy.gif)
 
 
 
