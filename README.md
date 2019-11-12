@@ -2,24 +2,23 @@
 
 CHALLENGE GOALS
 
-1. Username Enumeration: A careless developer mistake has created a username enumeration vulnerability. Determine which color has the vulnerability. You can use the existing username "jmonroe99" as a test. Next, figure out what mistake the developer made.
+1. Username Enumeration: Looking at the login screen for all the pages there were no major differences except on the green website there was a difference in the bolding of the login was unsuccessful.
+ ![Alt Text](https://media.giphy.com/media/W2zoSsTOFDJE1HITln/giphy.gif)
 
 
 
-
-2. Insecure Direct Object Reference: One of the three sites is missing code which would prevent some sensitive information from being made public. Determine which color has the vulnerability. Then, figure out what the other two sites did correctly to prevent the information leak.
-
-
-3. SQL Injection: Most of the data input received by these websites is being sanitized properly. However, one of the three sites has one place where the input is not being sanitized before being used in an SQL query. Determine which color has the vulnerability.
+2. Insecure Direct Object Reference: All the websites showed an ID for each person which is already bad but canbe functional but the red website when you went to ID 10 which was a non-public or supposed to be but apparently the red website did not properly have it checked to not shw whereas the other sites allowed id ten but redirected to the main salesperson page.
+ ![Alt Text](https://media.giphy.com/media/keaiPWOEcf5KTWSowt/giphy.gif)
 
 
+3. SQL Injection: Since most of the locations for input were sanitized one of the few places that there was not input was the url ending and it allowed you to change the salesperson through that.
+ ![Alt Text](https://media.giphy.com/media/PnC0T7HYADefkF2BYY/giphy.gif)
 
-4. Cross-Site Scripting: All three sites do a good job of protecting against a reflected XSS attack. However, one of the sites has a mistake which leaves the site vulnerable to a stored XSS attack. A reflected XSS attack would be easy to reveal, while a stored XSS does not provide instant feedback. You will need to log into the admin area and look through the CMS in order to "spring the trap" and find out if your attack succeeded. Determine which color has the vulnerability. Remember, others will be attacking these sites alongside you. Use your name in the XSS so that your results won't be confused with anyone else's (example: <script>alert('Mallory found the XSS!');</script>).
+
+4. Cross-Site Scripting:
   Upon looking across the site there are only a few places that a user could place info and one of them being the feedback tab. So after putting in an email and name using the script that was provided to prove it was me it was found that the green website did not properly sanitize for scripts with its feed back tab.
   
   ![Alt Text](https://media.giphy.com/media/LR13Ra9PLE6igOZlTt/giphy.gif)
-
-
 
 
 
@@ -31,4 +30,5 @@ CHALLENGE GOALS
 
 
 
-6. Session Hijacking/Fixation: Two of the three websites expire their active sessions and require users to re-login every 30 minutes. That is probably too aggressive for the real world, but it is better than the third site which allows sessions to be a year old, and never regenerates the session ID, even when the user agent string changes. This makes it vulnerable to both session hijacking and session fixation attacks.
+6. Session Hijacking/Fixation: Since the tool has been provided it was fairly easy to see which site after leaving them on for a period of time because blue did. Red and green both required a user to log back in after whereas blue still functioned normally meaning you could log in to any previous session.
+  ![Alt Text](https://media.giphy.com/media/IbgSn8nK1fdrF45ZV4/giphy.gif)
